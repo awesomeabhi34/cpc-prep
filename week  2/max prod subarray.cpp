@@ -14,7 +14,7 @@ for(int i=0;i<n;i++){
 	}else{
 		int temp=prod;
 		prod= max(neg*arr[i],1);
-		neg= min(prod*arr[i],1);
+		neg= min(temp*arr[i],1);
 		
 	}
 	
