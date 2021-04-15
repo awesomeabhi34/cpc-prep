@@ -1,18 +1,24 @@
-if(head!=NULL || head->next != NULL){
+bool detectLoop(Node* head)
+    {
+
+        if(head==NULL || head->next == NULL){
 	
 	return false;
 	
 }
 
 Node*slow= head;
-Node *fast = head->next;
+Node *fast = head;
 
-while(fast!= NULL){
-	if(slow == fast){
-	return true;	
-	}
+while(fast!= NULL && fast->next !=NULL){
+
 	slow = slow->next;
 		fast= fast->next->next;
+		
+			if(slow == fast){
+	return true;	
+	}
 }
 
 return false;
+    }
